@@ -22,16 +22,16 @@ export default function Footer() {
         <Box sx={styles.left}>
           <Logo />
           <Text as="p">
-            &copy; {new Date().getFullYear()} All right reserved - Design &
-            Developed by HazzleNut Consultancy
+            &copy; {new Date().getFullYear()} Design &
+            Developed by HazzleNut Pvt. Ltd.
           </Text>
         </Box>
         <Box sx={styles.right}>
-          <Link path="/" label="Home" />
-          <Link path="/" label="Adversite" />
-          <Link path="/" label="Supports" />
-          <Link path="/" label="Marketing" />
-          <Link path="/" label="FAQ" />
+          <Link path="/" label="LinkedIn" />
+          <Link path="/" label="Medium" />
+          <Link path="/" label="Email" />
+          {/* <Link path="/" label="Marketing" />
+          <Link path="/" label="FAQ" /> */}
         </Box>
       </Container>
     </footer>

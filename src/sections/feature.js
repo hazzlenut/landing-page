@@ -6,28 +6,28 @@ import Swiper from 'react-id-swiper';
 import FeatureCard from 'components/feature-card';
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 import featureImage1 from 'assets/tutorial-1-1.png';
-import featureImage2 from 'assets/tutorial-1-2.png';
+import featureImage2 from 'assets/tutorial-1-2.jpg';
 import featureImage3 from 'assets/tutorial-1-3.png';
 
 const FeatureData = [
   {
     image: featureImage1,
-    title: 'How to work with prototype design with adobe xd featuring tools',
+    title: 'The Challenges Associated With Building Products Using Large Language Models (LLMs).',
     comments: '22 Comments',
-    path: '/',
+    path: 'https://medium.com/ai-in-plain-english/the-challenges-associated-with-building-products-using-large-language-models-llms-a0573dcfdf5f',
   },
   {
     image: featureImage2,
-    title: 'Create multiple artboard by using figma prototyping development',
+    title: 'Utilizing AWS Auto Scaling and Containerization for Scalable and Cost-Effective Applications.',
     comments: '15 Comments',
-    path: '/',
+    path: 'https://medium.com/@hazzlenut/utilizing-aws-auto-scaling-and-containerization-for-scalable-and-cost-effective-applications-a50e81507be6',
   },
   {
     image: featureImage3,
     title:
-      'Convert your web layout theming easily with sketch zeplin extension',
+      'The art of Problem Solving in Software Engineering.',
     comments: '12 Comments',
-    path: '/',
+    path: 'https://medium.com/ai-in-plain-english/the-art-of-problem-solving-in-software-engineering-a3bd4c5ae539',
   },
 ];
 
