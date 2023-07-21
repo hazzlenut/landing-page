@@ -3,20 +3,24 @@ import { Box, Container, Heading, Button } from 'theme-ui';
 import BgShape from 'assets/cta-shape-1.svg';
 import btnShape from 'assets/cta-btn-shape-1.svg';
 const CallToAction = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const form = <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScANHuJZG_EqRjs3J02oP0XUndKBiosbzdzip2PHBs28jsFVw/viewform?embedded=true" width="640" height="1470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   return (
-    <Box sx={styles.wrapper}>
-      <Container sx={styles.container}>
-        <Box sx={styles.inner}>
-          <Heading as="h3">
-            Hire the world’s best developers <br />
-            and designers around!
-          </Heading>
-          <Box sx={styles.btnWrapper}>
-            <Button sx={styles.btn}>HIRE DEVELOPERS</Button>
+    <>{isOpen && <Modal children={form} header='Contact Information' setIsOpen={setIsOpen} />}
+      <Box sx={styles.wrapper}>
+        <Container sx={styles.container}>
+          <Box sx={styles.inner}>
+            <Heading as="h3">
+              Hire the world’s best developers <br />
+              and designers around!
+            </Heading>
+            <Box sx={styles.btnWrapper}>
+              <Button sx={styles.btn} onClick={() => setIsOpen(true)}>HIRE DEVELOPERS</Button>
+            </Box>
           </Box>
-        </Box>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </>
   );
 };
 
