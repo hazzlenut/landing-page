@@ -11,7 +11,7 @@ const FeatureCard = (props) => {
       <Box className="image" sx={styles.image}>
         <Image src={props.image} alt="" />
       </Box>
-      <Box sx={styles.content}>
+      <Box className="textContent" sx={styles.content}>
         <Heading as="h3">
           <Link path={props.path}>{props.title}</Link>
         </Heading>
@@ -47,6 +47,10 @@ const styles = {
       maxHeight: '100%',
       objectFit: 'cover'
     },
+  },
+  textContent: {
+    height: '176px',
+    display: 'grid'
   },
   content: {
     backgroundColor: '#fff',
