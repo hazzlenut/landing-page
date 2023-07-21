@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Grid, Button, Input, Heading, Text } from 'theme-ui';
 
 import Image from 'components/image';
+import Modal from 'components/modal/modal.js'
 
 import img1 from 'assets/partner-1-1.png';
 import img2 from 'assets/partner-1-2.png';
@@ -11,7 +12,10 @@ import bannerImg from 'assets/banner-image-1-1.png';
 import { Link } from 'components/link';
 
 const Banner = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const form = <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScANHuJZG_EqRjs3J02oP0XUndKBiosbzdzip2PHBs28jsFVw/viewform?embedded=true" width="640" height="1470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   return (
+    <>{isOpen && <Modal children={form} header= 'Contact Information' setIsOpen={setIsOpen} />}
     <Box sx={styles.banner} id="banner">
       <Container sx={styles.container}>
         <Grid sx={styles.grid}>
@@ -23,7 +27,7 @@ const Banner = () => {
               We help build and manage a team of world-class developers to bring
               your vision to life.
             </Text>
-            <Box as="form" sx={styles.form}>
+            <Box as="button" sx={styles.form}>
               {/* <Box as="label" htmlFor="subscribe" variant="styles.srOnly">
                 subscribe
               </Box>
@@ -45,6 +49,7 @@ const Banner = () => {
             style={{padding: '10px 30px',
               borderRadius: '6px',
             marginLeft: '0px'}}
+            onClick={() => setIsOpen(true)}
           />
             </Box>
             {/* <Box sx={styles.partner}>
@@ -66,6 +71,8 @@ const Banner = () => {
         </Grid>
       </Container>
     </Box>
+    </>
+
   );
 };
 
