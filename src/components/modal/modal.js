@@ -28,9 +28,9 @@ const Modal = ({ setIsOpen, children, header, enableActions }) => {
                             >
                                 Cancel
                             </button>
-                        </div>}
-                    </div>
-        </div>
+                        </div>
+                    </div>}
+                </div>
             </div>
         </>
     );
