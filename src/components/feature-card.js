@@ -38,9 +38,14 @@ const styles = {
     overflow: 'hidden',
     borderTopLeftRadius: ['5px'],
     borderTopRightRadius: ['5px'],
+    minHeight: '250px',
+    display: 'flex',
     img: {
       display: 'block',
       width: '100%',
+      maxWidth: '100%',
+      maxHeight: '100%',
+      objectFit: 'cover'
     },
   },
   content: {
