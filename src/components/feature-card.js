@@ -38,7 +38,7 @@ const styles = {
     overflow: 'hidden',
     borderTopLeftRadius: ['5px'],
     borderTopRightRadius: ['5px'],
-    minHeight: '250px',
+    height: '250px',
     display: 'flex',
     img: {
       display: 'block',
