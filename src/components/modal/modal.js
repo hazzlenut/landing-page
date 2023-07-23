@@ -1,8 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from "./Modal.module.css";
 import { RiCloseLine } from "react-icons/ri";
 
 const Modal = ({ setIsOpen, children, header, enableActions }) => {
+    useEffect(() => {
+        document.body.style.overflowY = 'hidden';
+        return () => {
+            document.body.style.overflowY = 'auto';
+        }
+    }, [])
     return (
         <>
             <div className={styles.darkBG} onClick={() => setIsOpen(false)} />

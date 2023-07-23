@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Box, Container, Grid, Button, Input, Heading, Text } from 'theme-ui';
 
 import Image from 'components/image';
@@ -13,22 +13,22 @@ import { Link } from 'components/link';
 
 const Banner = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const form = <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScANHuJZG_EqRjs3J02oP0XUndKBiosbzdzip2PHBs28jsFVw/viewform?embedded=true" width="640" height="1470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  const form = <iframe className="iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScANHuJZG_EqRjs3J02oP0XUndKBiosbzdzip2PHBs28jsFVw/viewform?embedded=true" width="640" height="1470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   return (
-    <>{isOpen && <Modal children={form} header= 'Contact Information' setIsOpen={setIsOpen} />}
-    <Box sx={styles.banner} id="banner">
-      <Container sx={styles.container}>
-        <Grid sx={styles.grid}>
-          <Box sx={styles.content}>
-            <Heading as="h3">
-              Great software is built with amazing developers.
-            </Heading>
-            <Text as="p">
-              We help build and manage a team of world-class developers to bring
-              your vision to life.
-            </Text>
-            <Box as="button" sx={styles.form}>
-              {/* <Box as="label" htmlFor="subscribe" variant="styles.srOnly">
+    <>{isOpen && <Modal children={form} header='Contact Information' setIsOpen={setIsOpen} />}
+      <Box sx={styles.banner} id="banner">
+        <Container sx={styles.container}>
+          <Grid sx={styles.grid}>
+            <Box sx={styles.content}>
+              <Heading as="h3">
+                Great software is built with amazing developers.
+              </Heading>
+              <Text as="p">
+                We help build and manage a team of world-class developers to bring
+                your vision to life.
+              </Text>
+              <Box as="button" sx={styles.form}>
+                {/* <Box as="label" htmlFor="subscribe" variant="styles.srOnly">
                 subscribe
               </Box>
               <Input
@@ -37,22 +37,20 @@ const Banner = () => {
                 placeholder="Subscribe newsletter"
                 sx={styles.form.input}
               /> */}
-              {/* <Button type="submit" sx={styles.form.button}>
+                {/* <Button type="submit" sx={styles.form.button}>
                 Subscribe
               </Button> */}
-              <Link
-            path="/"
-            ml={2}
-            label="HIRE DEVELOPERS"
-            sx={styles.headerBtn}
-            variant="buttons.primary"
-            style={{padding: '10px 30px',
-              borderRadius: '6px',
-            marginLeft: '0px'}}
-            onClick={() => setIsOpen(true)}
-          />
-            </Box>
-            {/* <Box sx={styles.partner}>
+                <Link
+                  path="/"
+                  ml={2}
+                  label="HIRE DEVELOPERS"
+                  sx={styles.headerBtn}
+                  className="buttonContainer"
+                  variant="buttons.primary"
+                  onClick={() => setIsOpen(true)}
+                />
+              </Box>
+              {/* <Box sx={styles.partner}>
               <Text as="span">Sponsored by:</Text>
               <Box as="div">
                 <Image src={img1} alt="" />
@@ -64,13 +62,13 @@ const Banner = () => {
                 <Image src={img3} alt="" />
               </Box>
             </Box> */}
-          </Box>
-          <Box sx={styles.image}>
-            <Image src={bannerImg} alt="" />
-          </Box>
-        </Grid>
-      </Container>
-    </Box>
+            </Box>
+            <Box sx={styles.image}>
+              <Image src={bannerImg} alt="" />
+            </Box>
+          </Grid>
+        </Container>
+      </Box>
     </>
 
   );
@@ -85,6 +83,12 @@ const styles = {
     backgroundColor: '#F6F8FB',
     overflow: 'hidden',
   },
+  iframe: {
+    'display': 'block',
+    'width': '100%',
+    'height': '100%',
+    'minHeight': '300px'
+  },
   container: {
     width: [null, null, null, null, null, null, '1390px'],
   },
@@ -92,6 +96,11 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: ['1fr', null, null, '1fr 1fr'],
     gridGap: '0',
+  },
+  buttonContainer: {
+    padding: '10px 30px',
+    borderRadius: '6px',
+    margin: '-7px'
   },
   content: {
     h3: {
