@@ -17,7 +17,7 @@ const Banner = () => {
     'display': 'block',
     'width': '100%',
     'height': '100%',
-    'minHeight': '300px'
+    'minHeight': '500px'
   }} src="https://docs.google.com/forms/d/e/1FAIpQLScANHuJZG_EqRjs3J02oP0XUndKBiosbzdzip2PHBs28jsFVw/viewform?embedded=true" width="640" height="1470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   return (
     <>{isOpen && <Modal children={form} header='Contact Information' setIsOpen={setIsOpen} />}
