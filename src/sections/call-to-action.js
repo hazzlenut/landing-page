@@ -1,10 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Box, Container, Heading, Button } from 'theme-ui';
 import BgShape from 'assets/cta-shape-1.svg';
 import btnShape from 'assets/cta-btn-shape-1.svg';
 const CallToAction = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const form = <iframe className={styles.iframe} src="https://docs.google.com/forms/d/e/1FAIpQLScANHuJZG_EqRjs3J02oP0XUndKBiosbzdzip2PHBs28jsFVw/viewform?embedded=true" width="640" height="1470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  const form = <iframe style={{
+    'display': 'block',
+    'width': '100%',
+    'height': '100%',
+    'minHeight': '300px'
+  }} src="https://docs.google.com/forms/d/e/1FAIpQLScANHuJZG_EqRjs3J02oP0XUndKBiosbzdzip2PHBs28jsFVw/viewform?embedded=true" width="640" height="1470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   return (
     <>{isOpen && <Modal children={form} header='Contact Information' setIsOpen={setIsOpen} />}
       <Box sx={styles.wrapper}>

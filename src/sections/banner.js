@@ -13,7 +13,12 @@ import { Link } from 'components/link';
 
 const Banner = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const form = <iframe className={styles.iframe} src="https://docs.google.com/forms/d/e/1FAIpQLScANHuJZG_EqRjs3J02oP0XUndKBiosbzdzip2PHBs28jsFVw/viewform?embedded=true" width="640" height="1470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  const form = <iframe style={{
+    'display': 'block',
+    'width': '100%',
+    'height': '100%',
+    'minHeight': '300px'
+  }} src="https://docs.google.com/forms/d/e/1FAIpQLScANHuJZG_EqRjs3J02oP0XUndKBiosbzdzip2PHBs28jsFVw/viewform?embedded=true" width="640" height="1470" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   return (
     <>{isOpen && <Modal children={form} header='Contact Information' setIsOpen={setIsOpen} />}
       <Box sx={styles.banner} id="banner">
@@ -45,7 +50,11 @@ const Banner = () => {
                   ml={2}
                   label="HIRE DEVELOPERS"
                   sx={styles.headerBtn}
-                  className={styles.buttonContainer}
+                  style={{
+                    padding: '10px 30px',
+                    borderRadius: '6px',
+                    margin: '-7px'
+                  }}
                   variant="buttons.primary"
                   onClick={() => setIsOpen(true)}
                 />
