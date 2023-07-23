@@ -45,7 +45,7 @@ const Banner = () => {
                   ml={2}
                   label="HIRE DEVELOPERS"
                   sx={styles.headerBtn}
-                  className="buttonContainer"
+                  className={styles.buttonContainer}
                   variant="buttons.primary"
                   onClick={() => setIsOpen(true)}
                 />
