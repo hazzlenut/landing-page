@@ -53,7 +53,8 @@ const Banner = () => {
                   style={{
                     padding: '10px 30px',
                     borderRadius: '6px',
-                    margin: '-7px'
+                    margin: '-7px',
+                    backgroundColor: '#0cae6d'
                   }}
                   variant="buttons.primary"
                   onClick={() => setIsOpen(true)}
