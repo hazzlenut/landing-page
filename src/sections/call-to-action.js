@@ -38,7 +38,7 @@ const styles = {
     mt: [0, null, null, null, '-80px'],
     position: 'relative',
     zIndex: '10',
-    backgroundColor: '#0cae6d',
+    backgroundColor: 'primary',
     backgroundImage: ['none', null, null, null, null, `url(${BgShape})`],
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '60% center',
