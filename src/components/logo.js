@@ -11,7 +11,7 @@ export default function Logo() {
         variant: 'links.logo',
       }}
     >
-      <Image src={logo} sx={{ display: 'flex' }} width="200" alt="startup landing logo" />
+      <Image src={"https://raw.githubusercontent.com/hazzlenut/landing-page/master/src/assets/logo.svg"} sx={{ display: 'flex' }} width="200" alt="startup landing logo" />
     </Link>
   );
 }

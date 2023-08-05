@@ -56,7 +56,7 @@ const MobileDrawer = () => {
     >
       <Scrollbars autoHide>
         <Box sx={styles.content}>
-          <Logo src={LogoDark} />
+          <Logo src={"https://raw.githubusercontent.com/hazzlenut/landing-page/master/src/assets/logo.svg"} />
           <Box sx={styles.menu}>
             {menuItems.map(({ path, label }, i) => (
               <ScrollLink
